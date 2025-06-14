@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    background-color: #f0e7d8;
+    font-family: "Courier New", Courier, monospace;
+}
+
+#root{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    max-width: 60rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1rem;
+    display: flex;
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px #000;
+}
+
+.date{
+    background-color: #eafdc6;
+    border: 2px solid #000;
+    border-radius: 0.4rem ;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.day{
+    font-size: 3rem;
+    padding: 1rem 2rem 0 2rem;
+}
+
+.month-year{
+    font-size: 1.6rem;
+    padding: 1.4remcd;
+}
+
