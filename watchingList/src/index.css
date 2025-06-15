@@ -51,11 +51,49 @@ html, body{
 
 .day{
     font-size: 3rem;
-    padding: 1rem 2rem 0 2rem;
+    padding: 1rem 2.2rem 0 2.2rem;
 }
 
 .month-year{
-    font-size: 1.6rem;
-    padding: 1.4remcd;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
 }
 
+.content{
+    padding-top: 1.5rem;
+    margin-left: 2rem;
+    flex: auto;
+}
+
+.content div{
+    font-size: 1.2rem;
+    padding-bottom: 0.6rem;
+}
+
+.movement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn{
+    color: #333;
+    background-color: #eafdc6;
+    border: 1px solid #000;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    display: inline-block;
+    transition: all 0.15s ease;
+    box-shadow: 4px 4px #000;
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px #000;
+}
+
+.arrow{
+    font-size: 1.4rem;
+}

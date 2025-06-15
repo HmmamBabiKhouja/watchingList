@@ -14,8 +14,12 @@ const ListItem = ()=>{
                 <div className="remaining-time">Remaining time : 17</div>
             </div>
             <div className="movement">
-                <div className="move-up">&#x279c;</div>
-                <div className="move-down">&#x279c;</div>
+            <button className="btn">
+                <span class="arrow">&#11205;</span>
+            </button>
+            <button className="btn">
+                <span class="arrow">&#11206;</span>
+            </button>
             </div>
         </div>
     )
