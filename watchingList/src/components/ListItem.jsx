@@ -15,10 +15,10 @@ const ListItem = ()=>{
             </div>
             <div className="movement">
             <button className="btn">
-                <span class="arrow">&#11205;</span>
+                <span className="arrow">&#11205;</span>
             </button>
             <button className="btn">
-                <span class="arrow">&#11206;</span>
+                <span className="arrow">&#11206;</span>
             </button>
             </div>
         </div>
