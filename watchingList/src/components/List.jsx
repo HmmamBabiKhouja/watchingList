@@ -5,9 +5,6 @@ const List = () => {
         <div className="container">
             <ListItem></ListItem>
             <ListItem></ListItem>
-            {/* <ListItem></ListItem>
-            <ListItem></ListItem>
-            <ListItem></ListItem> */}
         </div>  
     );
 };

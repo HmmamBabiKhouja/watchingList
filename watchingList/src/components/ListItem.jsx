@@ -1,17 +1,17 @@
-const ListItem = ()=>{
+export default function ListItem({day, month, year, title, desc, rem}){
     return(
         <div className="item">
             <div className="date">
-                <div className="day">27</div>
+                <div className="day">{day}</div>
                 <div className="month-year">
-                    <div className="month">June</div>
-                    <div className="year">2025</div>
+                    <div className="month">{month}</div>
+                    <div className="year">{year}</div>
                 </div>
             </div>
             <div className="content">
-                <div className="title">Squid game</div>
-                <div className="desc">season 3 will be relased on 27 June</div>
-                <div className="remaining-time">Remaining time : 17</div>
+                <div className="title">{title}</div>
+                <div className="desc">{desc}</div>
+                <div className="remaining-time">Remaining time : {rem}</div>
             </div>
             <div className="movement">
             <button className="btn">
@@ -25,4 +25,3 @@ const ListItem = ()=>{
     )
 }
 
-export default ListItem;
