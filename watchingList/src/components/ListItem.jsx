@@ -14,7 +14,7 @@ export default function ListItem({day, month, year, title, desc, rem, cate}){
                 <div className="remaining-time">Remaining time : {rem}</div>
                 <div className="cate">Category :{cate}</div>
             </div>
-            <div className="movement">
+            <div className="btns-section">
             <button className="btn" id="btn-up">
                 <span className="btn-shape">&#11205;</span>
             </button>
