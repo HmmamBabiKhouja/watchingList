@@ -45,18 +45,18 @@ html, body{
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
-}
+    gap:0.5rem
+    }
 
 .day{
     font-size: 3rem;
-    padding: 1rem 2.2rem 0 2.2rem;
+    padding:0 3rem;
 }
 
 .month-year{
     font-size: 1.3rem;
-    padding-bottom: 1rem;
 }
 
 .content{
@@ -95,6 +95,6 @@ html, body{
     box-shadow: 0 0 #000;
 }
 
-.arrow{
+.btn-shape{
     font-size: 1.4rem;
 }

@@ -1,4 +1,4 @@
-export default function ListItem({day, month, year, title, desc, rem}){
+export default function ListItem({day, month, year, title, desc, rem, cate}){
     return(
         <div className="item">
             <div className="date">
@@ -12,13 +12,17 @@ export default function ListItem({day, month, year, title, desc, rem}){
                 <div className="title">{title}</div>
                 <div className="desc">{desc}</div>
                 <div className="remaining-time">Remaining time : {rem}</div>
+                <div className="cate">Category :{cate}</div>
             </div>
             <div className="movement">
-            <button className="btn">
-                <span className="arrow">&#11205;</span>
+            <button className="btn" id="btn-up">
+                <span className="btn-shape">&#11205;</span>
             </button>
-            <button className="btn">
-                <span className="arrow">&#11206;</span>
+            <button className="btn" id="remove"> 
+                <span className="btn-shape">&#10005;</span>
+            </button>
+            <button className="btn" id="btn-down">
+                <span className="btn-shape">&#11206;</span>
             </button>
             </div>
         </div>
