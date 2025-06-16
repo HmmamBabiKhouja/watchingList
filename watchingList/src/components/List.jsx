@@ -12,15 +12,43 @@ const items=[
     { day: "-", month: "-", year:"-", title: "Silo", desc: "Set in a dystopian future where a community exists in a giant underground silo comprising 144 levels" },
     { day: "-", month: "-", year:"-", title: "Dark matter", desc: "A physicist in Chicago is warped into an alternate version of his life, leaving him to fight to return to his life to prevent the alternate version of himself from taking over his family." },
     { day: "-", month: "-", year:"-", title: "Dexter", desc: "this season is named Original sin" },
-
 ]
+
+const getMonthIndex=(month)=>{
+    const months = [
+    'january', 'february', 'march', 'april', 'may', 'june',
+    'july', 'august', 'september', 'october', 'november', 'december'
+    ];
+
+    const lowerCaseMonthName = month.toLowerCase();
+    let index = months.indexOf(lowerCaseMonthName)+1;
+    return index>=10? index : "0"+index;
+}
+
+const remainDays = (date)=>{
+    const today = new Date()
+    const givenDate = new Date(date)
+
+    const differenceInTime = givenDate.getTime()-today.getTime()
+    const differenceInDays = Math.ceil(differenceInTime/(1000*60*60*24))
+    return differenceInDays
+}
 
 const List = () => {
     return (
-        <div className="container">
-            <ListItem></ListItem>
-            <ListItem></ListItem>
-        </div>  
+        <div className="container">{
+            items.map((item, index)=>(
+                <ListItem
+                    key={index}
+                    day={item.day}
+                    month={item.month}
+                    year={item.year}
+                    title={item.title}
+                    desc={item.desc}
+                    rem={remainDays(`${item.year}-${getMonthIndex(item.month)}-${item.day}`)}
+                ></ListItem>
+            ))
+        }</div>  
     );
 };
 
