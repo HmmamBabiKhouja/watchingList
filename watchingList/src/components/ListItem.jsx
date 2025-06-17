@@ -1,4 +1,6 @@
-export default function ListItem({day, month, year, title, desc, rem, cate}){
+import PropTypes from 'prop-types';
+
+export default function ListItem({day, month, year, title, desc, rem, cate, onMoveUp, onRemove, onMoveDown}){
     return(
         <div className="item">
             <div className="date">
@@ -15,13 +17,13 @@ export default function ListItem({day, month, year, title, desc, rem, cate}){
                 <div className="cate">Category :{cate}</div>
             </div>
             <div className="btns-section">
-            <button className="btn" id="btn-up">
+            <button className="btn" onClick={onMoveUp} aria-label="move item up">
                 <span className="btn-shape">&#11205;</span>
             </button>
-            <button className="btn" id="remove"> 
+            <button className="btn" onClick={onRemove} aria-label="remove item"> 
                 <span className="btn-shape">&#10005;</span>
             </button>
-            <button className="btn" id="btn-down">
+            <button className="btn" onClick={onMoveDown} aria-label="move item down">
                 <span className="btn-shape">&#11206;</span>
             </button>
             </div>
@@ -29,3 +31,15 @@ export default function ListItem({day, month, year, title, desc, rem, cate}){
     )
 }
 
+ListItem.prototype={
+    day:PropTypes.string,
+    month:PropTypes.string,
+    year:PropTypes.string,
+    title:PropTypes.string,
+    desc:PropTypes.string,
+    rem:PropTypes.string,
+    cate:PropTypes.string,
+    onMoveUp:PropTypes.func,
+    onRemove:PropTypes.func,
+    onMoveDown:PropTypes.func,
+}
