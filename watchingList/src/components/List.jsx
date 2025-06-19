@@ -1,11 +1,17 @@
 import ListItem from "./ListItem";
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import {initialShows} from '../data/shows.js'
 
 export default function List(){
-    const [items, setItems] = useState(initialShows);
+    const [items, setItems] = useState(()=>{
+        const stored = localStorage.getItem("my-shows")
+        return stored ? JSON.parse(stored) : initialShows
+    });
 
-    console.log(items)
+    useEffect(() => {
+        localStorage.setItem('my-shows', JSON.stringify(items));
+    }, [items]);
+
     const apprevMonth=(month)=>{
         const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         return months[month];
