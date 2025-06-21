@@ -61,16 +61,13 @@ body {
     color: #333;
     font-size: 3rem;
     line-height: 1;
-    margin: 0;
-    padding: 0;
 }
 
 .month-year {
     font-size: 1rem;
     color: #555;
     line-height: 1.2;
-    margin: 0;
-    padding: 0;
+    text-align: center;
 }
 
 .content {
@@ -101,6 +98,7 @@ body {
 .btns-section {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -111,6 +109,7 @@ body {
     background-color: #eafdc6;
     border: 1px solid #000;
     border-radius: 0.4rem;
+    min-width:2.6rem;
     padding: 0.4rem 0.65rem;
     display: inline-block;
     transition: all 0.15s ease;
@@ -121,8 +120,26 @@ body {
 .btn:active {
     transform: translate(2px, 2px);
     box-shadow: 0 0 #000;
+    background-color: #d8f5a4;
 }
 
 .btn-shape {
     font-size: 1.4rem;
+}
+
+.btn-header {
+    height: 2.6rem;
+}
+
+.btn-header>.btn-shape{
+    line-height: 1.2rem;
+    vertical-align: top;
+}
+
+.header-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+    align-items: center;
+    padding: 1rem 2rem 0 0;
 }
