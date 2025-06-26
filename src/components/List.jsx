@@ -1,12 +1,7 @@
 import ListItem from "./ListItem";
-import {useState,useEffect} from 'react';
-import {initialShows} from '../data/shows.js'
+import {useEffect} from 'react';
 
-export default function List(){
-    const [items, setItems] = useState(()=>{
-        const stored = localStorage.getItem("my-shows")
-        return stored ? JSON.parse(stored) : initialShows
-    });
+export default function List({items, setItems}){
 
     useEffect(() => {
         localStorage.setItem('my-shows', JSON.stringify(items));
@@ -44,7 +39,7 @@ export default function List(){
     }
 
     return (
-        <div className="container">{
+        <div className="container flex fdc aic">{
             items.map((item)=>{
                 const date = new Date(item.date);
                 const day = date.getDate();

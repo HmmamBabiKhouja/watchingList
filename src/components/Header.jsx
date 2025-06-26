@@ -1,12 +1,12 @@
 import DarkMode from "./DarkMode" 
-import NewItem from "./NewItem" 
+import {NewItem} from "./NewItem" 
 import RemoveAll from "./RemoveAll" 
 
-const Header = () =>{
+const Header = ({items, setItems}) =>{
     return (
-        <div className="header-container">
+        <div className="header-container flex aic">
             <DarkMode/>
-            <NewItem/>
+            <NewItem items={items} setItems={setItems}/>
             <RemoveAll/>
         </div>
     )

@@ -2,21 +2,21 @@ import PropTypes from 'prop-types';
 
 export default function ListItem({day, month, year, title, desc, rem, cate, onMoveUp, onRemove, onMoveDown}){
     return(
-        <div className="item">
-            <div className="date">
+        <div className="item flex aic">
+            <div className="date flex fdc jcc aic">
                 <div className="day">{day}</div>
                 <div className="month-year">
                     <div className="month">{month}</div>
                     <div className="year">{year}</div>
                 </div>
             </div>
-            <div className="content">
+            <div className="content flex fdc">
                 <div className="title">{title}</div>
                 <div className="desc">{desc}</div>
                 <div className="remaining-time">Remaining time : {rem}</div>
                 <div className="cate">Category :{cate}</div>
             </div>
-            <div className="btns-section">
+            <div className="btns-section flex fdc jcc aic">
             <button className="btn" onClick={onMoveUp} aria-label="move item up">
                 <span className="btn-shape">&#11205;</span>
             </button>
