@@ -38,6 +38,8 @@ export default function List({items, setItems}){
         setItems(updated)
     }
 
+    if(!items.length) return <h2>Add a new item through + button above</h2>
+    
     return (
         <div className="container flex fdc aic">{
             items.map((item)=>{

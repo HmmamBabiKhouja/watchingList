@@ -45,11 +45,11 @@ export const NewItem =({items, setItems})=>{
                     <div className={`newItem-container ${showForm ?"show" :""} flex fdc jcc aic`}>
                         <button onClick={()=> setShowForm(false)} className="btn btn-cancel"><span className="btn-shape">&times;</span></button>
                         <form onSubmit={handleAddNew} className="info-form flex fdc">
-                            <label for="title">Title :</label>
+                            <label htmlFor="title">Title :</label>
                             <input id="title" type="text" placeholder="...." value={title} onChange={e=> setTitle(e.target.value)}required/>
-                            <label for="desc">Description :</label>
+                            <label htmlFor="desc">Description :</label>
                             <textarea id="desc" value={desc} onChange={e=> setDesc(e.target.value)} rows={4} required></textarea>
-                            <label for="cate">Category :</label>
+                            <label htmlFor="cate">Category :</label>
                             <select id="cate" value={cate} onChange={e => setCate(e.target.value)} required>
                                 <option value="">--Please choose one--</option>
                                 <option value="Thriller">Thriller</option>
@@ -59,7 +59,7 @@ export const NewItem =({items, setItems})=>{
                                 <option value="Adventure">Adventure</option>
                                 <option value="Drama">Drama</option>
                             </select>
-                            <label for="date">Release Date :</label>
+                            <label htmlFor="date">Release Date :</label>
                             <input id="date" type="date" placeholder="...." value={releaseDate} onChange={e => setreleaseDate(e.target.value)} required/>
                             <button type="submit" className="btn btn-submit"><span className="btn-shape">Submit</span></button>
                         </form>
