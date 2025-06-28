@@ -4,7 +4,7 @@ import {RemoveAll} from "./RemoveAll"
 
 const Header = ({items, setItems}) =>{
     return (
-        <div className="header-container flex aic">
+        <div className="header-container flex">
             <DarkMode/>
             <NewItem items={items} setItems={setItems}/>
             <RemoveAll items={items} setItems={setItems}/>

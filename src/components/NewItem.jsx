@@ -33,7 +33,6 @@ export const NewItem =({items, setItems})=>{
         setShowForm(false)
     };
 
-
     return(
         <div className="new-item">
             <button className="btn btn-header" onClick={()=>setShowForm(prev => !prev)} aria-label="new-item">

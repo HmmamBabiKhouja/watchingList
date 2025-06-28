@@ -10,7 +10,7 @@ const App = ()=>{
     })
 
     return( 
-    <div className="app-container">
+    <div className="app-container flex fdc aic">
         <Header items={items} setItems={setItems}/>
         <List items={items} setItems={setItems}/>
     </div>

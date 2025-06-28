@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+        box-sizing: border-box;
 }
 
 html,
@@ -23,13 +23,13 @@ body.light{
 }
 
 body.dark{
-    --background: #4b4b4b;
+    --background: #2c2c2c;
     --btn-background: #e49200;
     --btn-active:#fca311;
     --border:#e9e9e9;
     --text:#f6f6f6;
     --second-text:#f6f6f6;
-    --item-background: #2c2c2c;
+    --item-background: #4b4b4b;
 }
 
 body.light input[type="date"]::-webkit-calendar-picker-indicator {
@@ -170,6 +170,7 @@ h2{
 }
 
 .header-container {
+    width: 100%;
     gap: 1rem;
     justify-content: end;
     padding: 1rem 2rem 0 0;
