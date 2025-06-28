@@ -23,13 +23,13 @@ body.light{
 }
 
 body.dark{
-    --background: #2c2c2c;
+    --background: #4b4b4b;
     --btn-background: #e49200;
     --btn-active:#fca311;
     --border:#e9e9e9;
     --text:#f6f6f6;
     --second-text:#f6f6f6;
-    --item-background: #4b4b4b;
+    --item-background: #2c2c2c;
 }
 
 body.light input[type="date"]::-webkit-calendar-picker-indicator {
