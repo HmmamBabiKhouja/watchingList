@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function ListItem({day, month, year, title, desc, rem, cate, onMoveUp, onRemove, onMoveDown}){
+export default function ListItem({day, month, year, title, desc, cate, onMoveUp, onRemove, onMoveDown}){
     return(
         <div className="item flex aic">
             <div className="date flex fdc jcc aic">
@@ -13,7 +13,6 @@ export default function ListItem({day, month, year, title, desc, rem, cate, onMo
             <div className="content flex fdc">
                 <div className="title">{title}</div>
                 <div className="desc">{desc}</div>
-                <div className="remaining-time">Remaining time : {rem}</div>
                 <div className="cate">Category :{cate}</div>
             </div>
             <div className="btns-section flex fdc jcc aic">

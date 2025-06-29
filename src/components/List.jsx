@@ -12,16 +12,6 @@ export default function List({items, setItems}){
         return months[month];
     }
 
-    const remainDays = (date)=>{
-        const today = new Date()
-        const givenDate = new Date(date)
-
-        const differenceInTime = givenDate.getTime()-today.getTime()
-        const differenceInDays = Math.ceil(differenceInTime/(1000*60*60*24))
-
-        return differenceInDays<0? "already streamd" : differenceInDays
-    }
-
     const removeItem=(id)=>{
         setItems(prev => prev.filter(item=> item.id!==id))
     }
@@ -55,7 +45,6 @@ export default function List({items, setItems}){
                     year={year}
                     title={item.title}
                     desc={item.desc}
-                    rem={remainDays(item.date)}
                     cate={item.cate}
                     onMoveUp={()=> moveItem(item.id, -1)}
                     onMoveDown={()=> moveItem(item.id, +1)}
