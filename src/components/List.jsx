@@ -1,5 +1,6 @@
 import ListItem from "./ListItem";
 import {useEffect} from 'react';
+import {NewItem} from "./NewItem";
 
 export default function List({items, setItems}){
 
@@ -28,7 +29,12 @@ export default function List({items, setItems}){
         setItems(updated)
     }
 
-    if(!items.length) return <h2>Add a new item through + button above</h2>
+    if(!items.length) return (
+        <div className="empty-list-text flex aic jcc">
+            <h2>Add a new item</h2>
+            <NewItem items={items} setItems={setItems}/>
+        </div>
+    )
     
     return (
         <div className="container flex fdc aic">{
