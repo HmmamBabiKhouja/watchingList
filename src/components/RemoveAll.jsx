@@ -1,4 +1,8 @@
 import { useEffect } from "react"
+import TrashIcon from '../media/trash-svgrepo-com.svg?react';
+
+<TrashIcon />
+
 
 export const RemoveAll =({items, setItems})=>{
 
@@ -13,7 +17,7 @@ export const RemoveAll =({items, setItems})=>{
     return(
         <div className="remove-all">
             <button className="btn btn-header" aria-label="remove-all" onClick={()=>removeAll()}>
-                <span className="btn-shape">&#11198;</span>
+                <TrashIcon className="icon"/>
             </button>
         </div>
     )

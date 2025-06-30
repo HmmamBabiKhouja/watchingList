@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import AddNewItem from "../media/add-ellipse-svgrepo-com.svg?react"
+import Close from "../media/close-svgrepo-com.svg?react"
 import "../index.css"
 
 export const NewItem =({items, setItems})=>{
@@ -36,13 +38,15 @@ export const NewItem =({items, setItems})=>{
     return(
         <div className="new-item">
             <button className="btn btn-header" onClick={()=>setShowForm(prev => !prev)} aria-label="new-item">
-                <span className="btn-shape">&#43;</span>
+                <AddNewItem className="icon"/>
             </button>
             
                 {showForm && (
                 <div className="newItem flex jcc aic">
                     <div className={`newItem-container ${showForm ?"show" :""} flex fdc jcc aic`}>
-                        <button onClick={()=> setShowForm(false)} className="btn btn-cancel"><span className="btn-shape">&times;</span></button>
+                        <button onClick={()=> setShowForm(false)} className="btn btn-cancel">
+                            <Close className="icon"/>
+                        </button>
                         <form onSubmit={handleAddNew} className="info-form flex fdc">
                             <label htmlFor="title">Title :</label>
                             <input id="title" type="text" placeholder="...." value={title} onChange={e=> setTitle(e.target.value)}required/>
@@ -60,7 +64,9 @@ export const NewItem =({items, setItems})=>{
                             </select>
                             <label htmlFor="date">Release Date :</label>
                             <input id="date" type="date" placeholder="...." value={releaseDate} onChange={e => setreleaseDate(e.target.value)} required/>
-                            <button type="submit" className="btn btn-submit"><span className="btn-shape">Submit</span></button>
+                            <button type="submit" className="btn btn-submit">
+                                <span className="btn-submit-span">Submit</span>
+                            </button>
                         </form>
                     </div>
                 </div>

@@ -1,4 +1,7 @@
 import PropTypes from 'prop-types';
+import MoveUp from "../media/arrow-up-svgrepo-com.svg?react"
+import MoveDown from "../media/arrow-down-svgrepo-com.svg?react"
+import RemoveItem from "../media/minus-svgrepo-com.svg?react"
 
 export default function ListItem({day, month, year, title, desc, cate, onMoveUp, onRemove, onMoveDown}){
     return(
@@ -17,13 +20,13 @@ export default function ListItem({day, month, year, title, desc, cate, onMoveUp,
             </div>
             <div className="btns-section flex fdc jcc aic">
             <button className="btn" onClick={onMoveUp} aria-label="move item up">
-                <span className="btn-shape">&#11205;</span>
+                <MoveUp className="icon"/>
             </button>
             <button className="btn" onClick={onRemove} aria-label="remove item"> 
-                <span className="btn-shape">&#10005;</span>
+                <RemoveItem className="icon"/>
             </button>
             <button className="btn" onClick={onMoveDown} aria-label="move item down">
-                <span className="btn-shape">&#11206;</span>
+                <MoveDown className="icon"/>
             </button>
             </div>
         </div>
