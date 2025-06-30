@@ -1,16 +1,78 @@
-# React + Vite
+# WatchingList
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React app to keep track of shows you want to watch, built with [Vite](https://vitejs.dev/) and React.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add new shows with title, description, category, and release date
+- Move shows up or down in your list
+- Remove shows from your list
+- Data is saved in your browser (localStorage)
+- Responsive and modern UI
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
 
+- [Node.js](https://nodejs.org/) (v18 or newer recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
+### Installation
 
-to visit the website go to https://hmmambabikhouja.github.io/watchingList/
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/hmmambabikhouja/watchingList.git
+   cd watchingList
+   ```
+
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+### Running the App
+
+Start the development server:
+```sh
+npm run dev
+```
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Building for Production
+
+```sh
+npm run build
+```
+
+### Linting
+
+```sh
+npm run lint
+```
+
+## Project Structure
+
+```
+watchingList/
+  ├── public/
+  ├── src/
+  │   ├── assets/
+  │   ├── components/
+  │   │   ├── Header.jsx
+  │   │   ├── List.jsx
+  │   │   ├── ListItem.jsx
+  │   │   └── NewItem.jsx
+  │   ├── media/
+  │   ├── App.jsx
+  │   ├── index.css
+  │   └── main.jsx
+  ├── index.html
+  ├── package.json
+  └── vite.config.js
+```
+
+## Live Demo
+
+Visit the website: [https://hmmambabikhouja.github.io/watchingList/](https://hmmambabikhouja.github.io/watchingList/)
+
+## License

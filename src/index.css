@@ -129,14 +129,14 @@ h2{
 }
 
 .title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color:var(--second-text);
 }
 
 .desc,
 .cate {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--second-text);
 }
 
